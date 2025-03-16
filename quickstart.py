@@ -9,8 +9,9 @@ x_train, x_test = x_train / 255.0, x_test / 255.0
 
 model = keras.models.Sequential([
     keras.layers.Flatten(input_shape=(28,28)),
-    keras.layers.Dense(128, activation='relu'),
+    keras.layers.Dense(256, activation='relu'),
     keras.layers.Dropout(0.2),
+    keras.layers.Dense(32, activation='relu'),
     keras.layers.Dense(10)
 ])
 
@@ -26,4 +27,6 @@ model.compile(optimizer='adam',
 
 model.fit(x_train, y_train, epochs=5)
 
-model.evaluate(x_test, y_test, verbose=2)
+test_loss, test_acc = model.evaluate(x_test, y_test, verbose=2)
+
+print('\nTest accuracy:', test_acc)
