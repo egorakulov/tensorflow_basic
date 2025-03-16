@@ -9,6 +9,7 @@ This other project will have its own repo.
 
 ## Explaining the files
 
-- quickstart.py: basic helloworld of ML, simply followed an online tutorial
+- *quickstart.py*: classifies digits from 0-9, using the MNIST dataset
+- *basic_image_classification.py*: classify images of clothing as tshirt, trouser, pullover, dress, coat, sandal, shirt, sneaker, bag, ankle boot
 - 
 
